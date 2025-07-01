@@ -239,12 +239,6 @@ class SimEvaluator_hp
     //* hits
     G4HitStruct::List _g4hits;
 
-    //! pid of the parent particle
-    int _parent_pid = 0;
-
-    //! pid of the parent primary particle
-    int _primary_pid = 0;
-
     ClassDef(Container,1)
 
   };
