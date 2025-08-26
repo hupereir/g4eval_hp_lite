@@ -217,7 +217,12 @@ class TrackingEvaluator_hp
     float _y = 0;
     float _z = 0;
     float _r = 0;
+
+    // geometrical phi and eta
     float _phi = 0;
+    float _eta = 0;
+
+    // energy
     float _e = 0;
     float _chisquare = 0;
     //@}
@@ -228,7 +233,12 @@ class TrackingEvaluator_hp
     float _trk_y = 0;
     float _trk_z = 0;
     float _trk_r = 0;
+
+    // geometrical phi and eta
     float _trk_phi = 0;
+    float _trk_eta = 0;
+
+    // extrapolation length
     float _trk_dr = 0;
     //@}
 
@@ -266,6 +276,7 @@ class TrackingEvaluator_hp
     float _x = 0;
     float _y = 0;
     float _z = 0;
+    float _r = 0;
 
     float _eta = 0;
     float _phi = 0;
@@ -308,6 +319,8 @@ class TrackingEvaluator_hp
     unsigned int _nclusters_intt = 0;
     unsigned int _nclusters_tpc = 0;
     unsigned int _nclusters_micromegas = 0;
+    unsigned int _nclusters_micromegas_phi = 0;
+    unsigned int _nclusters_micromegas_z = 0;
 
     /// number of track states on track
     unsigned int _nstates = 0;
@@ -364,9 +377,11 @@ class TrackingEvaluator_hp
 
     //!@name seed information
     //@{
+    //! silicon seed
     bool _has_si_seed = false;
     SeedStruct _si_seed;
 
+    //! tpc seed
     bool _has_tpc_seed = false;
     SeedStruct _tpc_seed;
     //@}
