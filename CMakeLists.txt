@@ -20,17 +20,23 @@ include_directories(SYSTEM ${PROJECT_SOURCE_DIR} ${ROOT_INCLUDE_DIR} )
 # base
 set( libg4eval_hp_lite_SOURCES
   SimEvaluator_hp.cc
-  TrackingEvaluator_hp.cc )
+  TrackingEvaluator_hp.cc
+  TrackingEvaluatorLight_hp.cc
+)
 
 ######################
 # base
 set( libg4eval_hp_lite_HEADERS
   SimEvaluator_hp.h
-  TrackingEvaluator_hp.h )
+  TrackingEvaluator_hp.h
+  TrackingEvaluatorLight_hp.h
+)
 
 add_root_dictionaries( libg4eval_hp_lite_SOURCES
   SimEvaluator_hpLinkDef.h
-  TrackingEvaluator_hpLinkDef.h )
+  TrackingEvaluator_hpLinkDef.h
+  TrackingEvaluatorLight_hpLinkDef.h
+ )
 
 add_library( g4eval_hp_lite SHARED ${libg4eval_hp_lite_SOURCES} )
 target_link_libraries( g4eval_hp_lite ${ROOT_LIBRARIES})
